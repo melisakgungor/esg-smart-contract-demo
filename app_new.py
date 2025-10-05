@@ -12,6 +12,21 @@ st.set_page_config(
 
 st.markdown("""
 <style>
+st.markdown("""
+<style>
+body {
+  background-color: #c2d8c1;
+  color: #365e30;
+}
+[data-testid="stAppViewContainer"] {
+  background: linear-gradient(to right, #c2d8c1, #ffffff);
+}
+[data-testid="stSidebar"] {
+  background-color: #a6daa6;
+}
+</style>
+""", unsafe_allow_html=True)
+
 /* Remove default padding for a tighter layout */
 .block-container {padding-top: 1.2rem; padding-bottom: 2rem; max-width: 1200px}
 
