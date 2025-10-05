@@ -258,7 +258,7 @@ if st.session_state.runs:
     st.dataframe(runs, use_container_width=True)
 
     import json, io
-    buf = io.StringI0()
+    buf = io.StringIO()
     json.dump(runs, buf, indent=2)
 
     st.download_button(
