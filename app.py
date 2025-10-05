@@ -167,6 +167,10 @@ def run_cli():
 import streamlit as st
 
 st.set_page_config(page_title="ESG Green Loan Evaluator", layout = "wide")
+if "contract" not in st.session_state:
+    st.session_state.contract = GreenLoanContract()
+if "runs" not in st.session_state:
+    st.session_state.runs = []
 st.title("ESG Green Loan Evaluator")
 st.caption("Interactive prototype. Enter inputs and get an instant decision.")
 
@@ -248,16 +252,25 @@ if submitted:
         "greenwashing_score": d.greenwashing_score,
         "audit_ref": d.audit_ref,
     })
-
+runs = st.session_state.get("runs",[])
 if st.session_state.runs:
     st.subheader("Your evaluations")
-    st.dataframe(st.session_state.runs, use_container_width=True)
+    st.dataframe(runs, use_container_width=True)
+
     import json, io
-    buf = io.StringIO()
-    json.dump(st.session_state.runs, buf, indent=2)
-    st.download_button("Download results as JSON", data=buf.getvalue(), file_name="evaluations.json", mime="application/json")
+    buf = io.StringI0()
+    json.dump(runs, buf, indent=2)
+
+    st.download_button(
+      "Download results as JSON", 
+      data=buf.getvalue(), 
+      file_name="evaluations.json", 
+      mime="application/json"
+    )
+
     if st.button("Clear history"):
         st.session_state.runs = []
         st.rerun()
+      
 
 
