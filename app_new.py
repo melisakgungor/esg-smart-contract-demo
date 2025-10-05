@@ -25,9 +25,6 @@ body {
 </style>
 """, unsafe_allow_html=True)
 
-/* Remove default padding for a tighter layout */
-.block-container {padding-top: 1.2rem; padding-bottom: 2rem; max-width: 1200px}
-
 /* Headings */
 h1, h2, h3 {letter-spacing: 0.2px}
 
