@@ -12,8 +12,6 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-st.markdown("""
-<style>
 body {
   background-color: #c2d8c1;
   color: #365e30;
