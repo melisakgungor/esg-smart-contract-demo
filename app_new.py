@@ -12,21 +12,12 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-body {
-  background-color: #c2d8c1;
-  color: #365e30;
-}
-[data-testid="stAppViewContainer"] {
-  background: linear-gradient(to right, #c2d8c1, #ffffff);
-}
-[data-testid="stSidebar"] {
-  background-color: #a6daa6;
-}
-</style>
-""", unsafe_allow_html=True)
-
-/* Headings */
-h1, h2, h3 {letter-spacing: 0.2px}
+/* Global */
+body { background-color: #c2d8c1; color: #365e30; }
+[data-testid="stAppViewContainer"] { background: linear-gradient(to right, #c2d8c1, #ffffff); }
+[data-testid="stSidebar"] { background-color: #a6daa6; }
+.block-container { padding-top: 1.2rem; padding-bottom: 2rem; max-width: 1200px; }
+h1, h2, h3 { letter-spacing: 0.2px; }
 
 /* KPI cards */
 .card {
@@ -36,9 +27,9 @@ h1, h2, h3 {letter-spacing: 0.2px}
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   background: white;
 }
-.card.good {border-color: rgba(16,185,129,0.35)}
-.card.bad {border-color: rgba(239,68,68,0.35)}
-.card.neutral {border-color: rgba(59,130,246,0.35)}
+.card.good { border-color: rgba(16,185,129,0.35); }
+.card.bad { border-color: rgba(239,68,68,0.35); }
+.card.neutral { border-color: rgba(59,130,246,0.35); }
 
 /* Pills */
 .pill {
@@ -48,19 +39,20 @@ h1, h2, h3 {letter-spacing: 0.2px}
   font-size: 0.85rem;
   background: rgba(0,0,0,0.06);
 }
-.pill.ok {background: rgba(16,185,129,0.12)}
-.pill.warn {background: rgba(245,158,11,0.14)}
-.pill.err {background: rgba(239,68,68,0.14)}
+.pill.ok { background: rgba(16,185,129,0.12); }
+.pill.warn { background: rgba(245,158,11,0.14); }
+.pill.err { background: rgba(239,68,68,0.14); }
 
-/* Result banner */
-.result-ok {background: linear-gradient(90deg, rgba(16,185,129,0.12), transparent); border-left: 6px solid #10b981; padding: 14px 16px; border-radius: 10px;}
-.result-bad {background: linear-gradient(90deg, rgba(239,68,68,0.12), transparent); border-left: 6px solid #ef4444; padding: 14px 16px; border-radius: 10px;}
-.result-warn {background: linear-gradient(90deg, rgba(245,158,11,0.12), transparent); border-left: 6px solid #f59e0b; padding: 14px 16px; border-radius: 10px;}
+/* Result banners */
+.result-ok  { background: linear-gradient(90deg, rgba(16,185,129,0.12), transparent); border-left: 6px solid #10b981; padding: 14px 16px; border-radius: 10px; }
+.result-bad { background: linear-gradient(90deg, rgba(239,68,68,0.12), transparent); border-left: 6px solid #ef4444; padding: 14px 16px; border-radius: 10px; }
+.result-warn{ background: linear-gradient(90deg, rgba(245,158,11,0.12), transparent); border-left: 6px solid #f59e0b; padding: 14px 16px; border-radius: 10px; }
 
 /* Small text */
-.small {font-size: 0.82rem; color: #666}
+.small { font-size: 0.82rem; color: #365e30; }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 REGISTRY_WEIGHTS = {
