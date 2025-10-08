@@ -14,7 +14,7 @@ st.markdown("""
 <style>
 /* Global */
 body { background-color: #c2d8c1; color: #365e30; }
-[data-testid="stAppViewContainer"] { background: linear-gradient(to right, #c2d8c1, #ffffff); }
+[data-testid="stAppViewContainer"] { background: linear-gradient(to right, #c2d8c1, #90EE90); }
 [data-testid="stSidebar"] { background-color: #a6daa6; }
 .block-container { padding-top: 1.2rem; padding-bottom: 2rem; max-width: 1200px; }
 h1, h2, h3 { letter-spacing: 0.2px; }
